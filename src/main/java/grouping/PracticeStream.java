@@ -26,5 +26,10 @@ public class PracticeStream {
                 .collect(Collectors.toMap(String::new,String::length));
         return map;
     }
-
+    public Map<Integer, Set<String>> groupingWordByLength(){
+        Map<Integer, Set<String>> integerSetMap;
+        integerSetMap = Arrays.stream(scannerNumer())
+                .collect(Collectors.groupingBy(String::length,Collectors.mapping(String::new,Collectors.toSet())));
+        return integerSetMap;
+    }
 }
