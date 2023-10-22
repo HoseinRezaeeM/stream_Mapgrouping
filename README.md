@@ -20,3 +20,7 @@ Function- It is the property which is to be applied to the input elements.
  
 Classifier- It is used to map input elements into the destination map.
 Return value: It returns a collector as a map.</h3>
+
+<div>
+  <img src="https://github.com/HoseinRezaeeM/Stream_Mapgrouping/blob/master/groupingBy.png"
+</div>
