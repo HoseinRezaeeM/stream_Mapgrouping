@@ -20,4 +20,11 @@ public class PracticeStream {
         return sc;
     }
 
+    public Map<String,Integer> wordByLength(){
+        Map<String, Integer> map;
+        map = Arrays.stream(scannerNumer())
+                .collect(Collectors.toMap(String::new,String::length));
+        return map;
+    }
+
 }
