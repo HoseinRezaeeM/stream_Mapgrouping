@@ -1,10 +1,8 @@
 package grouping;
 
-import java.util.Arrays;
-import java.util.Map;
+import java.util.*;
 
-import java.util.Scanner;
-import java.util.Set;
+import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 
 public class PracticeStream {
@@ -29,12 +27,28 @@ public class PracticeStream {
         return map;
     }
 
-
     public static Map<Integer, Set<String>> groupingWordByLength(String[] word) {
         Map<Integer, Set<String>> integerSetMap;
         integerSetMap = Arrays.stream(word)
                 .collect(Collectors.groupingBy(String::length, Collectors.mapping(String::new, Collectors.toSet())));
         return integerSetMap;
+
     }
+
+    public static void groupingWordBySum(String[] word) {
+        Map<Integer, Set<String>> integerSetMap;
+        integerSetMap = Arrays.stream(word)
+                .collect(Collectors.groupingBy(String::length, Collectors.mapping(String::new, Collectors.toSet())));
+
+        for (Set<String> strings : integerSetMap.values()) {
+            final Optional<Integer> reduce = strings.stream().map(String::length).reduce(Integer::sum);
+            reduce.ifPresent(integer -> System.out.println(integer + "  =  " + (strings)));
+
+        }
+
+      //  return integerSetMap;
+    }
+
+
 
 }
