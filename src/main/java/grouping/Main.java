@@ -13,7 +13,11 @@ public class Main {
         System.out.println("------- WordByLength -------\n");
         System.out.println(PracticeStream.wordByLength(sc)+"\n");
         System.out.println("--- GroupingWordByLength ---\n");
-        System.out.println(PracticeStream.groupingWordByLength(sc));
+        System.out.println(PracticeStream.groupingWordByLength(sc)+"\n");
+        System.out.println("--- groupingWordBySum ----\n");
+        PracticeStream.groupingWordBySum(sc);
+
+
 
     }
 }
